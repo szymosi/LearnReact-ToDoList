@@ -1,6 +1,9 @@
+import ToDoList from './components/ToDoList.js'
+
 function App() {
   return (
     <div className="App">
+      <ToDoList/>
     </div>
   );
 }
