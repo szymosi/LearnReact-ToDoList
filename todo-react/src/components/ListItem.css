@@ -8,8 +8,9 @@
 .ListItem input{
     width: 1.5em;
     height: 1.5em;
-    color: #000000;
-    border: 1px solid #525252;
-    border-radius: 4px;
     cursor: pointer;
+}
+.ItemDone{
+    color: darkgray;
+    text-decoration: line-through;
 }
