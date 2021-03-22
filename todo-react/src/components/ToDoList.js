@@ -8,20 +8,16 @@ export default class ToDoList extends Component {
     constructor() {
         super();
         this.state = {todos: todosData};
-        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(id){
-        console.log("event");
-        this.setState((prevState) => {
-            const newTodos = prevState.todos.map((todo) => {
-                if(todo.id === id){
-                    todo.done = !todo.done;
-                }
-                return todo;
-            });
-            return {todos: newTodos};
+    handleChange = (id) => {
+        const newTodos = this.state.todos.map((todo) => {
+            if(todo.id === id){
+                todo.done = !todo.done;
+            }
+            return todo;
         });
+        this.setState({todos: newTodos});
     }
     
     render() {
